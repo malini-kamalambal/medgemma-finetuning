@@ -23,7 +23,7 @@ print(f"Launching training job: {JOB_NAME}")
 # 3. Launch the Supervised Fine-Tuning (SFT) Job
 # Note: This uses the Gemma 2B model which is fast and cheap for demos.
 sft_tuning_job = sft.train(
-    source_model="google/gemma3@medgemma-27b-it",  # The base model we are tuning
+    source_model="medgemma-27b-it",  # The base model we are tuning
     train_dataset=TRAINING_DATA_PATH,
     # Optional: Validation dataset can be added here if you had one
     epochs=4,          # How many times the model sees your data
